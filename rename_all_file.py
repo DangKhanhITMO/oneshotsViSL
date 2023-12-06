@@ -2,7 +2,7 @@ import os
 
 def rename_files_in_folder(folder_path):
     file_list = os.listdir(folder_path)
-    file_list.sort()  # Sắp xếp danh sách file theo thứ tự tăng dần
+    file_list.sort() 
 
     for i, file_name in enumerate(file_list):
         file_extension = os.path.splitext(file_name)[1]  # Lấy phần mở rộng của file
@@ -12,15 +12,15 @@ def rename_files_in_folder(folder_path):
         new_file_path = os.path.join(folder_path, new_file_name)
         os.rename(old_file_path, new_file_path)
     file_list = os.listdir(folder_path)
-    file_list.sort()  # Sắp xếp danh sách file theo thứ tự tăng dần
+    file_list.sort()  
     for i, file_name in enumerate(file_list):
-        file_extension = '.npy'  # Lấy phần mở rộng của file
-        new_file_name = f"{i}{file_extension}"  # Đặt tên mới cho file
+        file_extension = '.npy'  
+        new_file_name = f"{i}{file_extension}" 
         # Tạo đường dẫn đầy đủ đến file cũ và mới
         old_file_path = os.path.join(folder_path, file_name)
         new_file_path = os.path.join(folder_path, new_file_name)
         os.rename(old_file_path, new_file_path)
-    print("Đổi tên các file thành công!")
+    print("rename done!")
 def list_subdirectories(directory_path):
     subdirectories = []
 
