@@ -5,9 +5,9 @@ def rename_files_in_folder(folder_path):
     file_list.sort() 
 
     for i, file_name in enumerate(file_list):
-        file_extension = os.path.splitext(file_name)[1]  # Lấy phần mở rộng của file
-        new_file_name = f"{i}{file_extension+'new'}"  # Đặt tên mới cho file
-        # Tạo đường dẫn đầy đủ đến file cũ và mới
+        file_extension = os.path.splitext(file_name)[1]  
+        new_file_name = f"{i}{file_extension+'new'}"  
+      
         old_file_path = os.path.join(folder_path, file_name)
         new_file_path = os.path.join(folder_path, new_file_name)
         os.rename(old_file_path, new_file_path)
@@ -16,7 +16,6 @@ def rename_files_in_folder(folder_path):
     for i, file_name in enumerate(file_list):
         file_extension = '.npy'  
         new_file_name = f"{i}{file_extension}" 
-        # Tạo đường dẫn đầy đủ đến file cũ và mới
         old_file_path = os.path.join(folder_path, file_name)
         new_file_path = os.path.join(folder_path, new_file_name)
         os.rename(old_file_path, new_file_path)
@@ -31,10 +30,8 @@ def list_subdirectories(directory_path):
 
     return subdirectories
 
-# Thay đổi 'directory_path' thành đường dẫn thư mục gốc
 directory_path = '/home/khanhlinux/ML/autodata_sign/data_standart'
 subdirectories = list_subdirectories(directory_path)
 
-# In tất cả các subdirector
 for subdirectory in subdirectories:
     rename_files_in_folder(subdirectory)
