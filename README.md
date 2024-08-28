@@ -1,0 +1,1 @@
+Dang K., Bessmertny I.A. ViSL One-shot: generating Vietnamese sign language data set // Научно-технический вестник информационных технологий, механики и оптики [Scientific and Technical Journal of Information Technologies, Mechanics and Optics] - 2024, Vol. 24, No. 2, pp. 241-248
